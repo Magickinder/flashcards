@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-image: url("world.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-family: "Arial Black", serif;
+}
+
+.flex-container{
+    position: relative;
+    top: 10%;
+    display: flex;
+    width: 550px;
+    height: 550px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.flex-item{
+    width: 150px;
+    height: 150px;
+    color: orange;
+    font-family: "Arial Black", serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.card{
+    transform-style: preserve-3d;
+    transition: 1s ease;
+    width: 150px;
+    height: 150px;
+    background-color: lightgoldenrodyellow;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+}
+
+.back{
+    transform: rotateY(180deg);
+}
